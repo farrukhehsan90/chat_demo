@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "218804652075",
+    "firebase_url": "https://convey-bf6ff.firebaseio.com",
+    "project_id": "convey-bf6ff",
+    "storage_bucket": "convey-bf6ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218804652075:android:cdf6814f70c15f1fce426e",
+        "android_client_info": {
+          "package_name": "com.convey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218804652075-70r84g54iand3qu4hodhatnf00j4tr3o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.convey",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "218804652075-jj4aqd8cijlaeujl6ovv9daifrvjkms6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs5dGQptv6lk0aHVAgxNKznp21fbZV81c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218804652075-ihjqthdq3rdp0l8bpo4jrq517r46amlo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
