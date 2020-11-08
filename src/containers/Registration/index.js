@@ -186,7 +186,6 @@ class Register extends Component {
       platform: Platform.OS,
       termsAgreed: isAgreed,
     };
-    console.log(payload, 'pappppppppppppppppp');
     this.props.register_user(payload);
   };
 

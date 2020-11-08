@@ -58,10 +58,9 @@ class chatScreen extends Component {
 
   
   newChat = (user) => {
-    console.log("chatScreen -> newChat ->22222222222222222222 user", user)
     this.socket = io(baseUrl);
     this.socket.on('newChat', newData => {
-    console.log("chatScreen -> newChat -> newData322222222222222222222222", newData)
+
       if(newData.roomData ) {
          if(newData.type === 'audioCall') {
             Actions.AudioCall({data:newData, roomData: newData.roomData})
@@ -72,39 +71,11 @@ class chatScreen extends Component {
     });
   };
 
-  // componentDidMount() {
-  //   // const {user} = this.state;
-  //   // this.socket = io("http://192.168.18.7:3000")
-
-  //   const nextProps = this.props;
-
-  //   // this.socket.on("sign-in", msg => {
-  //   //     //msg is the message sent from server
-  //   //  });
-
-  //   const {user} = this.state;
-
-  //   if (nextProps.user) {
-  //     // alert(JSON.stringify(nextProps.user.data.data))
-
-  //     if (
-  //       !nextProps.user.failure &&
-  //       !nextProps.user.isFetching &&
-  //       nextProps.user.data.data &&
-  //       nextProps.user.data.success === true
-  //     ) {
-  //       this.setState({allUsers: nextProps.user.data.data});
-  //       this.socket.emit('sign-in', user);
-
-  //       this.setState({isloading: false});
-  //     }
-  //   }
-  // }
+  
   componentWillReceiveProps(nextProps) {
     const {user} = this.state;
 
     if (nextProps.user) {
-      // alert(JSON.stringify(nextProps.user.data.data))
 
       if (
         !nextProps.user.failure &&
@@ -125,26 +96,17 @@ class chatScreen extends Component {
   };
   async componentWillMount() {
     const {login, socialLogin} = this.props;
-    // this.socket = await io('http://192.168.18.68:3000');
     this.socket = await io(baseUrl);
-    // this.socket = await io('http://localhost:3000');
-    // this.socket = await io('https://gpsapp001.herokuapp.com');
-    // this.socket = await io('https://convey-stg.herokuapp.com/');
-    // this.socket = await io('http://192.168.0.105:3000');
     this._getRooms();
 
     this.socket.on('getAll', msg => {
       let filterUsers = [];
       let filterArray = [];
-      console.log(
-        'chatScreen -> componentWillMount -> this.props.login.data.data',
-        this.props.login.data.data,
-      );
+    
 
       this.setState({
         messages: msg,
       });
-      console.log(msg.conversation, ' msg.conversation');
       const itemss =
         msg.conversation &&
         msg.conversation.filter(item => {
@@ -174,10 +136,7 @@ class chatScreen extends Component {
     if (login.data.data && this.socket) {
       this.socket.emit('find-rooms', login.data.data._id);
       this.socket.on('getRooms', async chatRooms => {
-        console.log(
-          'chatScreen -> componentWillMount -> rooms ---------------------------------------',
-          chatRooms,
-        );
+        
         this.setState({chatRooms, refreshing: false});
       });
     }
@@ -186,7 +145,7 @@ class chatScreen extends Component {
   componentWillUnmount() {
     filterArray.length = 0;
   }
-  //3
+
 
   getData = () => {
     const {user} = this.state;
@@ -208,7 +167,7 @@ class chatScreen extends Component {
             }}
             // style={{ borderBottomColor: 'black', borderBottomWidth: Metrics.ratio(2) }}
             onPress={() => {
-              console.log(index, "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr")
+
               this.setState({
                 activeNavigation: activation,
                 previousIndex: routeindex,
@@ -246,7 +205,6 @@ class chatScreen extends Component {
   };
   renderNavigateButton = () => {
     const {activeNavigation, index} = this.state;
-    console.log('vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv', index);
     return (
       <View
         style={{

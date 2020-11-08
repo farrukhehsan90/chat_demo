@@ -19,7 +19,7 @@ class ApiSauce {
     };
 
     const response = await api.post(url, payload, {headers: Header});
-    console.log(response, 'llllllllllllllllllllllllll');
+
     return new Promise((resolve, reject) => {
       this.handlePromise(resolve, reject, response);
     });
@@ -76,7 +76,6 @@ console.log(Header)
   }
 
   handlePromise = (resolve, reject, response) => {
-    console.log(response, 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk');
     if (
       response.ok &&
       response.data &&
@@ -135,57 +134,6 @@ console.log(Header)
     }
   };
 
-  // async login(data) {
-  //   return new Promise((resolve, reject) => {
-  //     db.collection("users")
-  //       .doc(data)
-  //       .get()
-  //       .then(snapshot => {
-  //         if (snapshot.data()) {
-  //           this.handleFirebasePromise(resolve, reject, snapshot.data());
-  //         } else {
-  //           this.handleFirebasePromise(resolve, reject, {
-  //             error: "Something went wrong"
-  //           });
-  //         }
-  //       })
-  //       .catch(err => console.log(err, "errrrrrrrrrrrrrr"));
-  //   });
-  // }
-
-  // async getCollectionData(data) {
-  //   console.log("data", data);
-  //   let responseData = [];
-  //   let errorMessage = "Document does not exists";
-  //   return new Promise((resolve, reject) => {
-  //     db.collection(data).onSnapshot(
-  //       snapshot => {
-  //         snapshot.forEach(doc => {
-  //           if (doc.exists) {
-  //             responseData.push(doc.data());
-  //           } else {
-  //             this.handleFirebasePromise(resolve, reject, errorMessage);
-  //           }
-  //         });
-  //         this.handleFirebasePromise(resolve, reject, responseData);
-  //       },
-  //       error => {
-  //         console.log(error, "errorrrrrrrrrrrrrrr");
-  //         this.handleFirebasePromise(resolve, reject, error);
-  //       }
-  //     );
-  //   });
-  // }
-
-  // handleFirebasePromise = (resolve, reject, response) => {
-  //   if (response.email) {
-  //     resolve(response);
-  //   } else if (response.length) {
-  //     resolve(response);
-  //   } else {
-  //     reject(response.error);
-  //   }
-  // };
 }
 
 export default new ApiSauce();

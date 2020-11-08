@@ -42,10 +42,7 @@ class AudioCall extends Component {
   }
 
   componentDidMount() {
-    console.log(
-      '0000000000000000000000000000---------------------------00000000000000000000',
-      this.props.roomData,
-    );
+    
     const {roomType, usersInfo} = this.props.roomData;
     const members = usersInfo.filter(
       el => el._id != this.props.login.data.data._id,

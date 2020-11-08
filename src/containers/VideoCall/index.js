@@ -48,7 +48,7 @@ class VideoCall extends Component {
   }
 
   componentDidMount() {
-    console.log('-----------------------------------', this.props)
+
     const {roomType, usersInfo} = this.props.roomData;
     const members = usersInfo.filter(
       el => el._id != this.props.login.data.data._id,

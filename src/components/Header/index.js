@@ -50,7 +50,6 @@ class Header extends Component {
       userImage,
       calling,
     } = this.props;
-    console.log('image', userImage);
     return (
       <View>
         {calling && (

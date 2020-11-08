@@ -24,7 +24,6 @@ class Sidebar extends Component {
     const {myNavigation} = this.props;
     if (Actions.currentScene === 'Profile') {
       Actions.drawerClose();
-      console.log('tttttttttttttttttttttttt');
     } else {
       Actions.Profile();
     }
@@ -34,7 +33,6 @@ class Sidebar extends Component {
     const {myNavigation} = this.props;
     if (Actions.currentScene === 'Yourplaces') {
       Actions.drawerClose();
-      console.log('tttttttttttttttttttttttt');
     } else {
       Actions.Yourplaces();
       this.props.drawerMenuSwitched(myNavigation.newView, 'Yourplaces');
@@ -44,7 +42,7 @@ class Sidebar extends Component {
     const {myNavigation} = this.props;
     if (Actions.currentScene === 'StartDriving') {
       Actions.drawerClose();
-      console.log('tttttttttttttttttttttttt');
+
     } else {
       Actions.StartDriving();
       this.props.drawerMenuSwitched(myNavigation.newView, 'StartDriving');
@@ -54,7 +52,7 @@ class Sidebar extends Component {
     const {myNavigation} = this.props;
     if (Actions.currentScene === 'Message') {
       Actions.drawerClose();
-      console.log('tttttttttttttttttttttttt');
+
     } else {
       Actions.Message();
       this.props.drawerMenuSwitched(myNavigation.newView, 'Message');
@@ -64,7 +62,7 @@ class Sidebar extends Component {
     const {myNavigation} = this.props;
     if (Actions.currentScene === 'Location') {
       Actions.drawerClose();
-      console.log('tttttttttttttttttttttttt');
+
     } else {
       Actions.Location();
       this.props.drawerMenuSwitched(myNavigation.newView, 'Location');
@@ -74,7 +72,7 @@ class Sidebar extends Component {
     const {myNavigation} = this.props;
     if (Actions.currentScene === 'Feedback') {
       Actions.drawerClose();
-      console.log('tttttttttttttttttttttttt');
+
     } else {
       Actions.Feedback();
       this.props.drawerMenuSwitched(myNavigation.newView, 'Feedback');
@@ -84,7 +82,7 @@ class Sidebar extends Component {
     const {myNavigation} = this.props;
     if (Actions.currentScene === 'Help') {
       Actions.drawerClose();
-      console.log('tttttttttttttttttttttttt');
+
     } else {
       Actions.Help();
       this.props.drawerMenuSwitched(myNavigation.newView, 'Help');
@@ -94,7 +92,7 @@ class Sidebar extends Component {
     const {myNavigation} = this.props;
     if (Actions.currentScene === 'HostParty') {
       Actions.drawerClose();
-      console.log('tttttttttttttttttttttttt');
+
     } else {
       Actions.HostParty();
       this.props.drawerMenuSwitched(myNavigation.newView, 'HostParty');
@@ -103,7 +101,6 @@ class Sidebar extends Component {
   navigateFavouriteplaces = () => {
     if (Actions.currentScene === 'FavouritePlaces') {
       Actions.drawerClose();
-      console.log('tttttttttttttttttttttttt');
     } else {
       Actions.FavouritePlaces();
     }
@@ -112,10 +109,6 @@ class Sidebar extends Component {
     Actions.drawerClose();
     Actions.Login();
   };
-
-  // drowerCondition = () => {
-
-  // };
 
   renderBody = () => {
     return (
@@ -215,7 +208,6 @@ class Sidebar extends Component {
   };
 
   render() {
-    console.log('login data', this.props.login.data, '::');
 
     return (
       <View style={{height: Metrics.screenHeight * 1}}>

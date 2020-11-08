@@ -131,7 +131,7 @@ class Chat extends Component {
   }
 
   _renderItem = ({item}) => {
-    console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr", item)
+
     if (item.type !== 'text') {
       if (this.props.login.data.data._id === item.userId) return;
       if (item.type === 'videoCall') {

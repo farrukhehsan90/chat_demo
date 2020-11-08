@@ -29,10 +29,6 @@ class Loader extends Component {
     } else {
       Actions.Login();
     }
-    //   console.log(covertValue);
-    // } catch (e) {
-    //   // error reading value
-    // }
   };
 
   render() {

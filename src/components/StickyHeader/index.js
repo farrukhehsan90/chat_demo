@@ -49,7 +49,6 @@ class StickyHeader extends Component {
       itemQuantity,
       userImage,
     } = this.props;
-    console.log('image', userImage);
     return (
       <View
         style={[
